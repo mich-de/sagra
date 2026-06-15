@@ -3,6 +3,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+// Disable SSL certificate validation to bypass Zscaler intercept blocks
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 const url = process.env.BOXOL_EVENT_URL || "https://www.boxol.it/next/it/go2/select-ticket/614173/biglietti-la-tavola-dei-300-terza-edizione-marina-di-puolo-massa-lubrense";
 const telegramToken = process.env.TELEGRAM_BOT_TOKEN;
 const telegramChatId = process.env.TELEGRAM_CHAT_ID;
