@@ -7,3 +7,6 @@
 - Discovered that the ticket selection page contains the string `"Attualmente non disponibile"` when sold out, and has buttons with class `"primary bk-secondary"` (plus/minus) when available.
 - Confirmed that Boxol has no guest checkout option; a user account registration or login is required to complete the checkout path.
 - Initialized Node.js project directory in `d:\sagra` with configuration and basic documentation.
+- Created `check.js` (availability checker with Telegram integration) and `book.js` (booking automation script using Playwright).
+- Created a GitHub Actions scheduled workflow `.github/workflows/check-tickets.yml` configured to check hourly.
+- Configured git remote origin and pushed `main` branch to https://github.com/mich-de/sagra.
