@@ -1,0 +1,33 @@
+name: Check Boxol Ticket Availability
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Every hour
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  check-availability:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+
+      - name: Run Availability Scraper
+        env:
+          BOXOL_EVENT_URL: "https://www.boxol.it/next/it/go2/select-ticket/614173/biglietti-la-tavola-dei-300-terza-edizione-marina-di-puolo-massa-lubrense"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: npm run check

@@ -1,0 +1,15 @@
+{
+  "name": "sagra-boxol-checker",
+  "version": "1.0.0",
+  "description": "Boxol event ticket availability checker and booking automation",
+  "main": "check.js",
+  "type": "module",
+  "scripts": {
+    "check": "node check.js",
+    "book": "node book.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0"
+  }
+}
