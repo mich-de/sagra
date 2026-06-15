@@ -1,8 +1,8 @@
 # Task Roadmap
 
-- [ ] [DEVOPS] Initialize Node.js dependencies and browser downloads
-- [ ] [BACKEND] Implement availability checker (`check.js`) with Telegram integration
-- [ ] [BACKEND] Implement booking automation (`book.js`) with login and cart submission
-- [ ] [DEVOPS] Setup GitHub Action hourly cron workflow (`.github/workflows/check-tickets.yml`)
-- [ ] [DEVOPS] Perform smoke tests and verify local automation runs
-- [ ] [DEVOPS] Setup git repository with identity and perform first commit
+- [x] [DEVOPS] Initialize Node.js dependencies and browser downloads
+- [x] [BACKEND] Implement availability checker (`check.js`) with Telegram integration
+- [x] [BACKEND] Implement booking automation (`book.js`) with login and cart submission
+- [x] [DEVOPS] Setup GitHub Action hourly cron workflow (`.github/workflows/check-tickets.yml`)
+- [x] [DEVOPS] Perform smoke tests and verify local automation runs
+- [x] [DEVOPS] Setup git repository with identity and perform first commit
